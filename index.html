@@ -19,21 +19,14 @@
 			position: relative;
 		}
 		
-		.bild {
-			background-color: #336699;
-			color: white;
-			padding: 20px;
-			text-align: right;
-			position: relative;
-		}
 		
-		.bild img {
-			max-width: 25%;
-			height: 25%;
-			border-radius: 50%;
-			display: block;
-			margin: 0 auto;
-			margin-bottom: 20px;
+		.left-half {
+  			grid-column: 1;
+		}
+
+		.right-half {
+			background-color: #336699;
+  			grid-column: 2;
 		}
 		
 		header h1 {
@@ -100,12 +93,13 @@
 		<h2>PhD Student at Heidelberg University</h2>
 	</header>
 	
+	<div class='right-half'>
 	<section class='bild'>
 		<img src="me.jpg" alt="Pic"> 
 	</section>
-	
+	</div>
 
-	
+	<div class = "left-half">
 	<section>
 		<h3>About Me</h3>
 		I am a PhD student in Economics at the Chair of Economic Theory II (Joerg Oechssler) at Heidelberg University. <br>
@@ -128,7 +122,8 @@
 			<li>Office: Alfred-Weber-Institut, Bergheimer Straße 58, 69115 Heidelberg, Room 01.007</li>
 		</ul>
 	</section>
-	
+	</div>
+		
 	<footer>
     		<p>&copy; Julian Matthes 2023 </p>
 	</footer>
