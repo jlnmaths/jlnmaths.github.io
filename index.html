@@ -34,12 +34,18 @@
 			box-sizing: border-box;
 		}
 		
-		.container {
+		.row {
   			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			flex: 1 1;
   			box-sizing: border-box;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			padding: 5%;
+			box-sizing: border-box;
 		}
 		
 		header {
@@ -114,7 +120,8 @@
 	</style>
 </head>
 <body>
-	<section class='container'>
+	<section class = 'container'>
+	<section class='row'>
 	<div class='pic'>
 		<h3> Julian Matthes, Heidelberg University </h3>
 		<img src="me.jpg" alt="Picture"> 
@@ -144,10 +151,12 @@
 		</ul>
 	</div>
 	</div>
-	<div>
-		<h3> Working Papers </h3>
-		<a href="rt.pdf" > Finding Large Rainbow Trees in Colorings of K_{n,n}</a>
-	</div>
+	<section class='row'>
+		<div>
+			<h3> Working Papers </h3>
+			<a href="rt.pdf" > Finding Large Rainbow Trees in Colorings of K_{n,n}</a>
+		</div>
+	</section>
 	</section>
 
 	<footer>
