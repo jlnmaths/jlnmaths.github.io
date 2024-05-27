@@ -12,7 +12,7 @@
         }                
 
         .pic {
-            background-color: #336699;
+            background-color: #005A51;
             color: white;
             padding: 10%;
             box-sizing: border-box;
@@ -50,13 +50,13 @@
         }
 
         .firstrow {
-            background-color: #336699;
+            background-color: #005A51;
             color: white;
             display:flex;
             flex-wrap: wrap;
             align-content: center;
-	    width: 80%;
 	    align-text: left;
+	    width:80%;
 	    align: center;
         }
 
@@ -86,10 +86,11 @@
         }
         
         footer {
-            background-color: #336699;
+            background-color: #005A51;
             color: white;
             padding: 10px;
             text-align: center;
+	    width:80%;
             position: relative;
             bottom: 0;
         }
@@ -97,6 +98,13 @@
         .selfimg {
             width: 50%;
         }
+
+	.all {
+	    display:flex;
+	    flex-direction: column;
+	    align-content: center;
+	    justify-content: center;
+	}
 
         .img-down {
             margin-right: 4px;
@@ -120,7 +128,7 @@
     </style>
 </head>
 <body>
-
+<div class="all">
 <div class="container">
   <div class="firstrow">
     <div class="image-container">
@@ -167,9 +175,11 @@ We investigate how decision-makers' inference from historical data is influenced
                     </div>
   </div>
   </div>
+  <div>
   <footer>
     <p>&copy; Julian Matthes 2024 </p>
   </footer>
-
+  </div>
+</div>
 </body>
 </html>
