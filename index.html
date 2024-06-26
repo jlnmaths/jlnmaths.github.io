@@ -76,14 +76,18 @@
 	    text-align: left;
         }
         
-        div h3 {
+
+
+h3:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    text-align:left;
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 80%; /* Change this to whatever width you want. */
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
-            margin-bottom: 20px;
             font-size: 24px;
             font-weight: bold;
-
-        }
+}
         
         ul {
             list-style: none;
@@ -93,7 +97,7 @@
         .footer {
             background-color: #005A51;
             color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
 	    width:80%;
             position: relative;
@@ -138,9 +142,10 @@
     <div class="image-container">
       <img class="selfimg" src="me.jpg" alt="Foto">
     </div>
-                                          <div>
-
+                                         
+ <div>
                         <h3> About Me </h3>
+
                         <div>
                         <h4>Contact</h4>
                         <ul>
