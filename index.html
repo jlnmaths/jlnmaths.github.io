@@ -82,9 +82,7 @@
             justify-content: center;
         }
 
-        .image-container {
-	    min-width:30px;
-        }
+ 
 
 	.selfimg {
 	    max-width: 300px;
@@ -93,16 +91,18 @@
         /* Bullet points and image container styling */
         .summary-section {
             display: flex;
+	    flex-wrap: wrap;
             align-items: center;
-            justify-content: space-between;
             width: 100%;
             margin-top: 10px;
+	    justify-content: space-between;
         }
 
         .bullet-points {
             margin-top: 10px;
             color: #333;
-            width: 68%; 
+	    width: 68%;
+	    min-width:300px; 
         }
 
 	.about {
