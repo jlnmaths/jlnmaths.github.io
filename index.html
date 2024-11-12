@@ -11,13 +11,6 @@
             padding: 0;
         }
 
-        .pic {
-            background-color: #005A51;
-            color: white;
-            padding: 10%;
-            box-sizing: border-box;
-        }
-
         .paper {
             text-align: left;
             margin-bottom: 20px;
@@ -33,7 +26,6 @@
             color: white;
             display: flex;
 	    flex-wrap: wrap;
-            min-width: 360px;
             margin: auto;
             width: 80%;
             padding: 20px;
@@ -52,9 +44,6 @@
             margin-bottom: 20px;
         }
 
-	.box {
-	    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-	}
 
         .firstrow div, .secondrow div {
             text-align: left;
@@ -86,10 +75,6 @@
             margin: auto;
         }
 
-        .selfimg {
-            max-width: 300px;
-        }
-
         .all {
             display: flex;
             flex-direction: column;
@@ -97,32 +82,13 @@
             justify-content: center;
         }
 
-        .img-down {
-            margin-right: 4px;
-            position: relative;
-            top: 6px;
+        .image-container {
+	    min-width:30px;
         }
 
-        .firstrow .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-	    min-width:360px;
-        }
-
-        /* Abstract visibility control */
-        .abstract-content {
-            display: none;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        .abstract-toggle {
-            color: #005A51;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+	.selfimg {
+	    max-width: 300px;
+	}
 
         /* Bullet points and image container styling */
         .summary-section {
@@ -139,18 +105,17 @@
             width: 68%; 
         }
 
+	.about {
+	    min-width: 300px;
+	}
+
 
         .bulletpoints {
             margin-top: 10px;
             color: white;
-            width: 68%; 
         }
 	    
-        .intro {
-            width: 68%; 
-        }
 
-        /* Placeholder image styling */
         .project-image {
             max-width: 150px;
             border: 1px solid #ddd;
@@ -158,7 +123,6 @@
 	    padding: 5px;
         }
 
-        /* Title styling */
         .paper-title {
             font-size: 20px;
             font-weight: bold;
@@ -169,6 +133,7 @@
             font-weight: bold;
             color: #005A51;
         }
+
         .links{
             font-size: 15px;
             font-weight: bold;
@@ -185,7 +150,7 @@
                 <img class="selfimg" src="img.png" alt="Foto">
             </div>
 
-            <div>
+            <div class="about">
                 <h2> Welcome! </h2>
                 <div class="intro">
                     I am a PhD candidate at Heidelberg University. <br>
