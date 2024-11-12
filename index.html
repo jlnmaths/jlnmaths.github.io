@@ -30,13 +30,24 @@
             background-color: #005A51;
             color: white;
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             margin: auto;
             width: 80%;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .firstrow {
+                flex-direction: row; /* Align horizontally if screen width >= 600px */
+                align-items: flex-start;
+            }
+
+            .firstrow img {
+                margin-bottom: 0; /* Remove bottom margin for horizontal alignment */
+            }
         }
 
         .firstrow img {
