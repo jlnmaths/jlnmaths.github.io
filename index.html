@@ -153,6 +153,17 @@
             font-weight: bold;
             color: #005A51;
         }
+	    
+h3:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    text-align:left;
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 80%; /* Change this to whatever width you want. */
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
+}
 
     </style>
 </head>
@@ -195,7 +206,7 @@
 
         <div class="secondrow">
             <h3>Research in Progress</h3>
-
+		
             <div class="paper">
                 <div class="paper-title">On the Demand for Mental Models (with Katharina Momsen)</div>
                 
