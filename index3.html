@@ -1,7 +1,270 @@
+<!DOCTYPE html>
 <html>
-  <head> <title> tbd </title> </head>
-  <body>
-    Nothing here yet
-  </body>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian Matthes</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pic {
+            background-color: #005A51;
+            color: white;
+            padding: 10%;
+            box-sizing: border-box;
+        }
+
+        .paper {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            margin: 5px;
+            margin: auto;
+        }
+
+        .firstrow {
+            background-color: #005A51;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 360px;
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .secondrow {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+        }
+
+        .firstrow div, .secondrow div {
+            min-width: 360px;
+            text-align: left;
+            margin: 20px;
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #005A51;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+	    list-style-type: square;
+
+            padding-left: 10;
+        }
+
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            width: 80%;
+            position: relative;
+            bottom: 0;
+            min-width: 360px;
+            margin: auto;
+        }
+
+        .selfimg {
+            max-width: 300px;
+        }
+
+        .all {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .img-down {
+            margin-right: 4px;
+            position: relative;
+            top: 6px;
+        }
+
+        .firstrow .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Abstract visibility control */
+        .abstract-content {
+            display: none;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .abstract-toggle {
+            color: #005A51;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Bullet points and image container styling */
+        .summary-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .bullet-points {
+            margin-top: 10px;
+            color: #333;
+            width: 68%; 
+        }
+
+        /* Placeholder image styling */
+        .project-image {
+            max-width: 150px;
+            border: 1px solid #ddd;
+            background-color: #f0f0f0;
+        }
+
+        /* Title styling */
+        .paper-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #005A51;
+        }
+        .paper-subtitle {
+            font-size: 15px;
+            font-weight: bold;
+            color: #005A51;
+        }
+        .links{
+            font-size: 15px;
+            font-weight: bold;
+            color: #005A51;
+        }
+
+    </style>
+</head>
+<body>
+<div class="all">
+    <div class="container">
+        <div class="firstrow">
+            <div class="image-container">
+                <img class="selfimg" src="img.png" alt="Foto">
+            </div>
+
+            <div>
+                <h2> Julian Matthes </h2>
+                <div>
+                    Welcome to my Website! <br>
+                    I am a PhD candidate at Heidelberg University.<br>
+                    I will be visiting University College London from January to April 2025.<br>
+                </div>
+
+                <h4>Contact</h4>
+                <ul>
+                    <li>julian.matthes [at] awi.uni-heidelberg.de</li>
+                    <li>AWI, Bergheimer Straße 58, Room 01.007.</li>
+                </ul>
+
+                <h4>Education</h4>
+                <ul>
+                    <li>Since 2021: PhD candidate in Economics at Heidelberg University</li>
+                    <li>2021 - 2023: Visiting PhD student at GESS, Mannheim University</li>
+                    <li>2016 - 2021: BSc and MSc Mathematics at Heidelberg University</li>
+                </ul>
+                <h4>Research Interests</h4>
+                <ul>
+                    <li>Behavioral and Experimental Economics</li>
+                    <li>Microeconomic Theory</li>
+                    <li>Sports Economics</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="secondrow">
+            <h3>Research in Progress</h3>
+
+            <div class="paper">
+                <div class="paper-title">On the Demand for Mental Models (with Katharina Momsen)</div>
+                
+                <!-- Summary section with bullet points and image -->
+                <div class="summary-section">
+                    <ul class="bullet-points">
+                        <li>Online experiment conducted on Prolific</li>
+			<li>Do people treat interpretations of historic data as a substitute to more data when making predictions? </li>
+			<li>Does anticipatory utility impact the tradeoff?</li>
+                    </ul>
+                    <img src="placeholder.png" alt="Project Image" class="project-image">
+                </div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">Economic Decision Making under Physical Load (with Carlo Dindorf)</div>
+                
+                <!-- Summary section with bullet points and image -->
+                <div class="summary-section">
+                    <ul class="bullet-points">
+			<li>Lab experiment currently conducted in Kaiserslautern </li>
+ 			<li>Does economic behavior change within individuals when exercising versus at rest? If so, how?</li>
+                    </ul>
+                    <img src="placeholder.png" alt="Project Image" class="project-image">
+                </div>
+            </div>
+
+            <h3>Publications</h3>
+            <div class="paper">
+                <div class="paper-title">Don't Put All Your Legs in One Basket - Theory and Evidence on Coopetition in Road Cycling (with David Piazolo) </div>
+		<div class="paper-subtitle"><i>European Economic Review</i>: Volume 170 (2024)</div>
+		<div class="links"> <center>[<a href='https://doi.org/10.1016/j.euroecorev.2024.104892'>Paper</a>] [<a href='https://www.youtube.com/watch?v=WRdfxium890'>Video Presentation</a>] [<a href='Cycling_Case_Study.pdf'>Case Study</a>]</center></div>
+		
+                
+                <!-- Summary section with bullet points and image -->
+                <div class="summary-section">
+                    <ul class="bullet-points">
+                        <li>Theoretical and empirical analysis: How do teammates in competing groups impact cooperation within groups of cyclists?</li>
+                        <li>Main Takeaways: Teammates in competing groups create free-riding opportunities in both groups. Asymmetric groups tend to cooperate better. </li>
+                        <li>Applications in IO, e.g. coopetition in ports or tourism destinations.</li>
+                    </ul>
+                    <img src="cyc.png" alt="Project Image" class="project-image">
+                </div>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">Finding Large Rainbow Trees in Colorings of <img class="img-down" src='knn.svg'> </div>
+		<div class="paper-subtitle"> <i>The Electronic Journal of Combinatorics</i>: Volume 30, Issue 4 (2023)</div>
+                <div class="links"><center>[<a href='https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i4p28'>Paper</a>]</center></div>
+ 
+                <!-- Summary section with bullet points and image -->
+                <div class="summary-section">
+                    <ul class="bullet-points">
+                        <li>I prove that asymptotically, the bipartite graph with 2n vertices (see picture for n=5) can be partitioned into n copies of any (!) tree with n edges. </li>
+			<li>You wonder how this is economics? It's not.</li>
+		    </ul>
+                    <img src="dcol.png" alt="Project Image" class="project-image">
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Julian Matthes 2024</p>
+    </div>
+</div>
+</body>
 </html>
