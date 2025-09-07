@@ -30,8 +30,8 @@
 		    background-color: #005A51;
 		    color: white;
 		    display: flex;
-		    flex-direction: column; /* default mobile */
-		    align-items: flex-start; /* start for bubble */
+		    flex-direction: column; 
+		    align-items: flex-start; 
 		    padding: 20px;
 		    border-radius: 8px;
 		    gap: 20px;
@@ -46,7 +46,6 @@
 		    border-radius: 8px;
 		}
 		
-		/* Comic speech bubble */
 		.speech-bubble {
 		    position: relative;
 		    background: #ffffff;
@@ -55,32 +54,31 @@
 		    padding: 20px;
 		    max-width: 700px;
 		    font-size: 1rem;
-		    margin-left: 20px; /* gap from profile picture */
+		    margin-left: 20px; 
 		}
 		
 		/* Default: desktop/tablet, tail points LEFT toward profile picture */
 		.speech-bubble::before {
 		    content: '';
 		    position: absolute;
-		    bottom: 20px;       /* vertical position of the tail */
-		    left: -20px;        /* offset just outside bubble */
+		    top: 20px;       
+		    left: -20px;        
 		    width: 0;
 		    height: 0;
 		    border: 12px solid transparent;
 		    border-right-color: #ffffff; /* same as bubble background */
 		}
 		
-		/* On mobile: bubble stacks under the picture, so tail points UP */
 		@media (max-width: 599px) {
 		    .speech-bubble {
-		        margin-left: 0;      /* no awkward gap on stacked layout */
-		        margin-top: 12px;    /* space below the image */
+		        margin-left: 0;      
+		        margin-top: 12px;    
 		    }
 		
 		    .speech-bubble::before {
 		        content: '';
 		        position: absolute;
-		        top: -20px;        /* put tail above bubble */
+		        top: -12px;        /* put tail above bubble */
 		        left: 30px;        /* horizontal offset (adjust as needed) */
 		        width: 0;
 		        height: 0;
