@@ -26,24 +26,50 @@
             min-height: 100vh;
         }
 
-        .firstrow {
-            background-color: #005A51;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-            border-radius: 8px;
-			margin: 20px;
-        }
-
-        .firstrow img, .selfimg {
-            width: 100%;
-            max-width: 300px; 
-            height: auto;
-            border-radius: 8px;
-        }
+		.firstrow {
+		    background-color: #005A51;
+		    color: white;
+		    display: flex;
+		    flex-direction: column; /* default mobile */
+		    align-items: flex-start; /* start for bubble */
+		    padding: 20px;
+		    border-radius: 8px;
+		    gap: 20px;
+		    margin: 20px;
+		    position: relative;
+		}
+		
+		.profile-pic {
+		    width: 100%;
+		    max-width: 300px;
+		    height: auto;
+		    border-radius: 8px;
+		}
+		
+		/* Speech bubble style */
+		.speech-bubble {
+		    position: relative;
+		    background: #ffffff; /* light background for contrast */
+		    color: #005A51;
+		    border-radius: 16px;
+		    padding: 20px;
+		    max-width: 700px;
+		    font-size: 1rem;
+		}
+		
+		/* Pointer triangle */
+		.speech-bubble::after {
+		    content: '';
+		    position: absolute;
+		    bottom: 0;
+		    left: 30px; /* adjust horizontal position */
+		    width: 0;
+		    height: 0;
+		    border: 15px solid transparent;
+		    border-top-color: #ffffff; /* same as bubble background */
+		    border-bottom: 0;
+		    margin-bottom: -15px; /* pull triangle outside bubble */
+		}
 
         .secondrow {
             display: flex;
@@ -113,26 +139,23 @@
             .firstrow img { max-width: 200px; }
             .summary-section { gap: 18px; }
             .bullet-points { flex-basis: 70%; }
+			.speech-bubble::after {left: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="all">
         <div class="container">
-            <div class="firstrow">
-                <img src="img.png" alt="Profile Picture">
-                <div>
-                    <h2>Hi!</h2>
-                    <p>I am a fifth-year Economics PhD-student at Heidelberg University under supervision of Jörg Oechssler.</p>
-					<p>I completed the PhD-courses at Mannheim University and spent part of my fourth year visiting Ran Spiegler at University College London.</p>
-					<p>I write models and design experiments to address questions in behavioral economics and industrial organisation. I have also worked with field data from professional sports.</p>
-                    <h4>Contact</h4>
-                    <ul class="bulletpoints">
-                        <li>julian.matthes [at] awi.uni-heidelberg.de</li>
-                        <li>AWI, Bergheimer Straße 58, Room 01.007.</li>
-                    </ul>
-                </div>
-            </div>
+			<div class="firstrow">
+			    <img src="img.png" alt="Profile Picture" class="profile-pic">
+			    <div class="speech-bubble">
+			        <h2>Hi!</h2>
+			        <p>I am a fifth-year Economics PhD-student at Heidelberg University under supervision of Jörg Oechssler.</p>
+			        <p>I completed the PhD-courses at Mannheim University and spent part of my fourth year visiting Ran Spiegler at University College London.</p>
+			        <p>I write models and design experiments to address questions in behavioral economics and industrial organisation. I have also worked with field data from professional sports.</p>
+					<p> Contact me at julian.matthes [at] awi.uni-heidelberg.de</p>
+				</div>
+			</div>
 
             <div class="secondrow">
                 <h3>Working Papers (ask me)</h3>
