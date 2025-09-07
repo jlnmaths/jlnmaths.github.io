@@ -46,29 +46,48 @@
 		    border-radius: 8px;
 		}
 		
-		/* Speech bubble style */
+		/* Comic speech bubble */
 		.speech-bubble {
 		    position: relative;
-		    background: #ffffff; /* light background for contrast */
+		    background: #ffffff;
 		    color: #005A51;
 		    border-radius: 16px;
 		    padding: 20px;
 		    max-width: 700px;
 		    font-size: 1rem;
+		    margin-left: 20px; /* gap from profile picture */
 		}
 		
-		/* Pointer triangle */
-		.speech-bubble::after {
+		/* Default: desktop/tablet, tail points LEFT toward profile picture */
+		.speech-bubble::before {
 		    content: '';
 		    position: absolute;
-		    bottom: 0;
-		    left: 30px; /* adjust horizontal position */
+		    bottom: 20px;       /* vertical position of the tail */
+		    left: -20px;        /* offset just outside bubble */
 		    width: 0;
 		    height: 0;
-		    border: 15px solid transparent;
-		    border-top-color: #ffffff; /* same as bubble background */
-		    border-bottom: 0;
-		    margin-bottom: -15px; /* pull triangle outside bubble */
+		    border: 12px solid transparent;
+		    border-right-color: #ffffff; /* same as bubble background */
+		}
+		
+		/* On mobile: bubble stacks under the picture, so tail points UP */
+		@media (max-width: 599px) {
+		    .speech-bubble {
+		        margin-left: 0;      /* no awkward gap on stacked layout */
+		        margin-top: 12px;    /* space below the image */
+		    }
+		
+		    .speech-bubble::before {
+		        content: '';
+		        position: absolute;
+		        top: -20px;        /* put tail above bubble */
+		        left: 30px;        /* horizontal offset (adjust as needed) */
+		        width: 0;
+		        height: 0;
+		        border: 12px solid transparent;
+		        border-bottom-color: #ffffff; /* points down into bubble */
+		        border-top: 0;
+		    }
 		}
 
         .secondrow {
@@ -134,7 +153,7 @@
 
         @media (min-width: 600px) {
             .firstrow { flex-direction: row; align-items: flex-start; gap: 20px; }
-            .firstrow img { max-width: 200px; }
+            .firstrow img { max-width: 300px; }
             .summary-section { gap: 18px; }
             .bullet-points { flex-basis: 70%; }
 			.speech-bubble::after {left: 20px; }
