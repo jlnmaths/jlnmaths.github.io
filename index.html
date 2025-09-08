@@ -45,50 +45,62 @@
 		    border-radius: 8px;
 		}
 		
-		.speech-bubble {
-		    position: relative;
-		    background: #ffffff;
-		    color: #000000;
-			border: 2px solid black;
-		    border-radius: 16px;
-		    padding: 20px;
-		    max-width: 700px;
-		    font-size: 1rem;
-		    margin-left: 20px; 
-		}
-		
-		/* Default: desktop/tablet, tail points LEFT toward profile picture */
-		.speech-bubble::before {
-		    content: '';
-		    position: absolute;
-		    top: 20px;       
-		    left: -20px;        
-		    width: 0;
-		    height: 0;
-		    border: 12px solid black;
-		    border-right-color: #000000; /* same as bubble background */
-		}
-		
+.speech-bubble {
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid black;  
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 700px;
+    font-size: 1rem;
+    margin-left: 20px; 
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -20px;                 /* aligns with bubble's border */
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: black;   /* matches border color */
+}
+
+/* Tail fill (white inside) */
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0px;                 /* 2px closer so it overlaps border */
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: #ffffff; /* matches bubble background */
+}
 		@media (max-width: 799px) {
 		    .speech-bubble {
 		        margin-left: 0;      
 		        margin-top: 12px;    
 		    }
 		
-		    .speech-bubble::before {
-		        content: '';
-		        position: absolute;
-		        top: -12px;        /* put tail above bubble */
-		        left: 30px;        /* horizontal offset (adjust as needed) */
-		        width: 0;
-		        height: 0;
-		        border: 12px solid black;
-		        border-bottom-color: #000000; /* points down into bubble */
-		        border-top: 0;
-		    }
+    .speech-bubble::after {
+        top: -14px;
+        left: 30px;
+        border: 14px solid transparent;
+        border-bottom-color: black;
+        border-top: 0;
+    }
 
-			.profile-pic { width:100%; }
-		}
+    .speech-bubble::before {
+        top: -12px;
+        left: 30px;
+        border: 12px solid transparent;
+        border-bottom-color: #ffffff;
+        border-top: 0;
+    }
+}
 
         .secondrow {
             display: flex;
@@ -143,7 +155,6 @@
             .firstrow { flex-direction: row; align-items: flex-start; gap: 20px; }
             .summary-section { gap: 18px; }
             .bullet-points { flex-basis: 70%; }
-			.speech-bubble::after {left: 20px; }
         }
     </style>
 </head>
@@ -157,8 +168,8 @@
 			        <p>I am a fifth-year Economics PhD-student at Heidelberg University under supervision of Jörg Oechssler.</p>
 			        <p>I write models and design experiments to address questions in behavioral economics and industrial organisation. I have also worked with field data from professional sports.</p>
 			        <p>I completed the PhD-courses at Mannheim University and spent part of my fourth year visiting Ran Spiegler at University College London.</p>
-					<p> Contact me at julian.matthes [at] awi.uni-heidelberg.de.</p>
-				</div>
+				<p> Contact me at julian.matthes [at] awi.uni-heidelberg.de.</p>
+			    </div>
 			</div>
 
             <div class="secondrow">
